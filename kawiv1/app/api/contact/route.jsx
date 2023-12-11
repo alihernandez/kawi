@@ -4,9 +4,9 @@ const nodemailer = require("nodemailer");
 // Handles POST requests to /api
 
 export async function POST(request) {
-  const username = "contact.form9two@yahoo.com";
-  const password = "pseaghzjusxhirhc";
-  const myEmail = "ali.hernandez9two@gmail.com";
+//   const username = ;
+//   const password = ;
+//   const myEmail = ;
 
   console.log("dealing with request");
   const formData = await request.formData();
@@ -18,18 +18,21 @@ export async function POST(request) {
   // create transporter object
   const transporter = nodemailer.createTransport({
     host: "smtp.mail.yahoo.com",
-    port: 465,
-    secure: true,
+    port: 587,
+    secure: false,
+    // Encryption: TLS/SSL,
     auth: {
-      user: "contact.form9two@yahoo.com",
-      pass: "pseaghzjusxhirhc",
+      user: username,
+      pass: password,
     },
   });
 
   try {
+    await transporter.verify();
+  console.log('SMTP connection verified successfully');
     await transporter.sendMail({
-      from: "contact.form9two@yahoo.com",
-      to: "ali.hernandez9two@gmail.com",
+      from: username,
+      to: myEmail,
       replyTo: email,
       subject: `Website activity from ${email}`,
       html: `
@@ -37,11 +40,20 @@ export async function POST(request) {
             <p>Email: ${email} </p>
             <p>Message: ${message} </p>
             `,
-    });
+    }
+    
+    );
+    console.log("sendMAil");
+    return new NextResponse.json({ message: 'Success: email was sent' });
+} catch (error) {
+  console.error('Error:', error);
+  console.log(myEmail);
 
-    return NextResponse.json({ message: "Success: email was sent" });
-  } catch (error) {
-    console.log(error);
-    NextResponse.status(500).json({ message: "COULD NOT SEND MESSAGE" });
+  if (error.response) {
+    console.error('SMTP Response:', error.response);
   }
+
+  return new NextResponse.json({ message: 'COULD NOT SEND MESSAGE' }, { status: 500 });
+
+}
 }
