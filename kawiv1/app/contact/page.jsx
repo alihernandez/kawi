@@ -29,7 +29,7 @@ export default function Contact() {
           <h1 className="text-xl font-semibold">*Placeholder*</h1>
         </div>
         <div className="relative flex flex-col space-y-2">
-          <label htmlFor="title" className="text-sm font-light text-gray-500">
+          <label htmlFor="title" className="text-sm font-light text-white">
             Subject
           </label>
           <input
@@ -46,7 +46,7 @@ export default function Contact() {
           />
         </div>
         <div className="relative flex flex-col space-y-2">
-          <label htmlFor="title" className="text-sm font-light text-gray-500">
+          <label htmlFor="title" className="text-sm font-light text-white">
             Contact us today!
           </label>
           <textarea

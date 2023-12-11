@@ -19,9 +19,18 @@ const Footer = () => {
             </a>
           </div>
           <div>
+            <nav>
+              <ul>
+                <li>"LOCATIONINFO"</li>
+                <li>"PHONENUMBER"</li>
+                <li>"OTHER INFO"</li>
+              </ul>
+            </nav>
+          </div>
+          <div>
             {/* Contact Information */}
             <p className="text-sm">
-              <span className="font-bold">Contact:</span> info@example.com
+              <span className="font-bold">Contact:</span> kawiservicesaspen@gmail.com
             </p>
           </div>
         </div>

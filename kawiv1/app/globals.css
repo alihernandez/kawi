@@ -1,6 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Forum';
+  src: url('/fonts/Forum-Regular') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: 'Forum';
+}
+
 body{
     min-height: 100vh;
     display: flex;
@@ -22,10 +33,14 @@ form {
 #contactForm {
     min-height: 65vh;
     background-color: #d5cbc0;
+    border: 5px solid #394f5c;
 }
 
 #outterDiv {
+    min-height: 25vh;
+    padding: 2rem;
     background-color: #d5cbc0;
+    border: 5px solid #394f5c;
 }
 
 #innerLine {
