@@ -5,7 +5,9 @@ export async function POST(request) {
     try {
         const { subject, message } = await request.json();
 
-      
+        // const transporter = nodemailer.createTransport({
+
+        // })
 
         const mailOption = {
             from: 'contact.form9two@yahoo.com',

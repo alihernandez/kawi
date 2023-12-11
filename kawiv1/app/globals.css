@@ -1,9 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    margin-top: auto;
+}
 
 body {
     background-color: #9a9d9e;
+}
+
+form {
+    width: 75%;
+    height: 50vh;
+}
+
+#contactForm {
+    min-height: 65vh;
+    background-color: #d5cbc0;
 }
 
 #outterDiv {
@@ -13,3 +31,54 @@ body {
 #innerLine {
     background-color: #394f5c;
 }
+
+#nav {
+    background-color: #394f5c;
+}
+
+/* services */
+/* styles/services.css */
+
+.grid {
+    display: grid;
+  }
+  
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* styles/careers.css */
+
+.job-opening {
+    /* Add styles for each job opening container */
+  }
+  
+  .job-opening img {
+    /* Add styles for the job opening images */
+  }
+  /* Add more styles as needed */
+  
+
+/* footer */
+/* styles/footer.css */
+
+footer {
+    background-color: #394f5c;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
