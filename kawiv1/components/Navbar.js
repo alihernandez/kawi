@@ -1,50 +1,35 @@
 'use client'
 
-import Image from "next/image";
+import { useState } from "react";
 import Link from "next/link";
-// import hklogo from "../public/hklogo.png"
-// import bars from "../public/bars-solid"
-import { useState, useEffect, useRef } from "react";
 
 const Navbar = () => {
-  const handleClick = () => {
-    console.log('fff');
-      const primaryNav = document.querySelector(".primary-navigation");
-      const navToggle = document.querySelector(".mobile-toggle");
-    console.log(primaryNav)
-    const visibility = primaryNav.getAttribute("data-visable"); 
-    console.log(visibility)
-    if (visibility === "false") {
-      primaryNav.setAttribute('data-visable', true)
-      navToggle.setAttribute('aria-expanded', true)
-    } else if (visibility === "true") {
-      primaryNav.setAttribute('data-visable', false)
-      navToggle.setAttribute('aria-expanded', false)
-    }
-   
-    
-  }
+  const [isNavVisible, setNavVisible] = useState(false);
+  const [isButtonVisible, setButtonVisible] = useState(true);
 
+  const handleClick = () => {
+    setNavVisible(!isNavVisible);
+    setButtonVisible(false); // Hide the button after it's clicked
+  };
 
   return (
-    <header className="primary-header flex p-4 text-white"  id="nav">
+    <header className="primary-header flex p-4 text-white" id="nav">
       <div className="nav flex-1">
         <h3 className="text-2xl font-bold">Kawi Services LLC</h3>
       </div>
-      <button
-        onClick={() => {
-          handleClick();
-        }}
-        className="mobile-toggle block lg:hidden"
-        aria-controls="primary-navigation"
-        aria-expanded="false"
-      >
-        {/* Add your mobile menu icon or text here */}
-        Menu
-      </button>
-      <nav className="hidden lg:flex">
+      {isButtonVisible && ( // Render the button only if it's visible
+        <button
+          onClick={handleClick}
+          className="mobile-toggle block lg:hidden"
+          aria-controls="primary-navigation"
+          aria-expanded={isNavVisible.toString()}
+        >
+          Menu
+        </button>
+      )}
+      <nav className={`lg:flex ${isNavVisible ? "" : "hidden"}`}>
         <ul
-          data-visible="false"
+          data-visible={isNavVisible.toString()}
           id="primary-navigation"
           className="primary-navigation flex space-x-4"
         >
