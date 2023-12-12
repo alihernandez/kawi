@@ -8,27 +8,44 @@
   font-weight: normal;
   font-style: normal;
 }
-* {
-  font-family: 'Forum';
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('/fonts/WorkSans-Italic-VariableFont_wght') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 
 body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-footer{
-    margin-top: auto;
+    background-image: url('/noise2.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #9a9d9e;
 }
 
-body {
-    background-color: #9a9d9e;
+h1, h2, h3, h4, h5, h6, #nav {
+  font-family: 'Forum';
+}
+
+p, li {
+  font-family: 'WorkSans';
+}
+
+footer{
+    margin-top: auto;
 }
 
 form {
     width: 75%;
     height: 50vh;
 }
+/* .main {
+  background-image: url('/noise.svg');
+} */
 
 #contactForm {
     min-height: 65vh;
@@ -36,9 +53,15 @@ form {
     border: 5px solid #394f5c;
 }
 
+#mailButton {
+  margin-top: 2em;
+  margin: auto;
+}
+
 #outterDiv {
     min-height: 25vh;
     padding: 2rem;
+    margin-top: 0%;
     background-color: #d5cbc0;
     border: 5px solid #394f5c;
 }
@@ -71,6 +94,14 @@ form {
   }
 
   /* styles/careers.css */
+#jobs {
+  border: 5px solid #394f5c;
+  margin-top: 5em;
+  min-height: 65vh;
+  background-color: #394f5c50;
+background-image: url('/noise.svg');
+background-size: cover;
+}
 
 .job-opening {
     /* Add styles for each job opening container */

@@ -46,7 +46,7 @@ export default function Contact() {
           />
         </div>
         <div className="relative flex flex-col space-y-2">
-          <label htmlFor="title" className="text-sm font-light text-white">
+          <label htmlFor="title" className="text-sm font-lg text-white">
             Contact us today!
           </label>
           <textarea
@@ -64,7 +64,8 @@ export default function Contact() {
         </div>
         <button
           type='submit'
-          className="w-full sm:w-1/2 flex items-center justify-center space-x-3 rounded-lg bg-blue-600 p-2 text-white shadow-blue-500 hover:bg-blue-700 hover:shadow-md"
+          className="w-full sm:w-1/2 flex justify-center space-x-3 rounded-lg bg-blue-600 p-2 text-white shadow-blue-500 hover:bg-blue-700 hover:shadow-md"
+          id='mailButton'
         >
           <span>Send Message</span>
         </button>
