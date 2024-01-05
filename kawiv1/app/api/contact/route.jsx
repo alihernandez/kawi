@@ -1,59 +1,47 @@
-import { NextResponse, NextRequest } from "next/server";
-const nodemailer = require("nodemailer");
-
-// Handles POST requests to /api
+import { NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 
 export async function POST(request) {
-//   const username = ;
-//   const password = ;
-//   const myEmail = ;
-
-  console.log("dealing with request");
-  const formData = await request.formData();
-  console.log(formData);
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const message = formData.get("message");
-
-  // create transporter object
-  const transporter = nodemailer.createTransport({
-    host: "smtp.mail.yahoo.com",
-    port: 587,
-    secure: false,
-    // Encryption: TLS/SSL,
-    auth: {
-      user: username,
-      pass: password,
-    },
-  });
-
   try {
-    await transporter.verify();
-  console.log('SMTP connection verified successfully');
+    const { name, email, subject, message } = await request.json();
+
+    const transporter = nodemailer.createTransport({
+      host: "smtp.mail.yahoo.com",
+      port: 465,
+      secure: true,
+      auth: {
+        user: "contact.form9two@yahoo.com",
+        pass: '',
+      },
+    });
+
     await transporter.sendMail({
-      from: username,
-      to: myEmail,
+      from: "contact.form9two@yahoo.com",
+      to: "ali.hernandez9two@gmail.com",
       replyTo: email,
       subject: `Website activity from ${email}`,
       html: `
-            <p>Name: ${name} </p>
-            <p>Email: ${email} </p>
-            <p>Message: ${message} </p>
-            `,
-    }
-    
-    );
-    console.log("sendMAil");
-    return new NextResponse.json({ message: 'Success: email was sent' });
-} catch (error) {
-  console.error('Error:', error);
-  console.log(myEmail);
+        <p>Name: ${name} </p>
+        <p>Email: ${email} </p>
+        <p>Message: ${message} </p>
+      `,
+    });
 
-  if (error.response) {
-    console.error('SMTP Response:', error.response);
+    const mailOption = {
+      from: 'contact.form9two@yahoo.com',
+      to: 'ali.hernandez92@gmail.com',
+      subject: "Send Email Tutorial",
+      html: `
+        <h3>Hello User</h3>
+        <li> title: ${subject}</li>
+        <li> message: ${message}</li> 
+      `,
+    };
+
+    await transporter.sendMail(mailOption);
+
+    return NextResponse.json({ message: "Email Sent Successfully" }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ message: "Failed to Send Email" }, { status: 500 });
   }
-
-  return new NextResponse.json({ message: 'COULD NOT SEND MESSAGE' }, { status: 500 });
-
-}
 }
