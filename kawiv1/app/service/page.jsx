@@ -4,7 +4,7 @@
 const Service = () => {
   const services = [
     {
-      title: 'Weekly House Checks, Monthly Full Inspections',
+      title: 'Weekly House Checks',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       image: 'https://cdn.pixabay.com/photo/2016/04/16/21/22/crosscut-saw-1333772_1280.jpg', // Replace with your image path
     },
