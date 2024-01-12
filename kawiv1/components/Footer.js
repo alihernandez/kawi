@@ -21,9 +21,9 @@ const Footer = () => {
           <div>
             <nav>
               <ul>
-                <li>"LOCATIONINFO"</li>
-                <li>"PHONENUMBER"</li>
-                <li>"OTHER INFO"</li>
+                <li>LOCATIONINFO</li>
+                <li>PHONENUMBER</li>
+                <li>OTHER INFO</li>
               </ul>
             </nav>
           </div>
