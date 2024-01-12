@@ -1,5 +1,7 @@
 // pages/service.js
 
+import Image from "next/image";
+
 
 const Service = () => {
   const services = [
@@ -44,7 +46,7 @@ const Service = () => {
           {services.map((service, index) => (
             <div key={index} className="bg-white p-4 rounded-lg shadow-md flex items-center">
               <div className="flex-shrink-0 mr-4">
-                <img src={service.image} alt={service.title} className="w-16 h-16 rounded-full" />
+                <Image src={service.image} alt={service.title} className="w-16 h-16 rounded-full" width={64} height={64} />
               </div>
               <div>
                 <h2 className="text-xl font-bold mb-4">{service.title}</h2>

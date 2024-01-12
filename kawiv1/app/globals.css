@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
   font-family: 'Forum';
   src: url('/fonts/Forum-Regular') format('truetype');
   font-weight: normal;
@@ -11,10 +11,10 @@
 
 @font-face {
   font-family: 'WorkSans';
-  src: url('/fonts/WorkSans-Italic-VariableFont_wght') format('truetype');
+  src: url('/public/fonts/WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 
 body{
@@ -123,8 +123,8 @@ footer {
   }
   
   .social-icons img {
-    width: 30px;
-    height: 30px;
+    /* width: 30px;
+    height: 30px; */
     margin-right: 10px;
   }
   
