@@ -4,12 +4,12 @@
 const Service = () => {
   const services = [
     {
-      title: 'Construction Management',
+      title: 'Weekly House Checks, Monthly Full Inspections',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       image: 'https://cdn.pixabay.com/photo/2016/04/16/21/22/crosscut-saw-1333772_1280.jpg', // Replace with your image path
     },
     {
-      title: 'Design and Build',
+      title: 'Monthly Full Inspections',
       description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
       image: 'https://cdn.pixabay.com/photo/2016/08/03/20/04/wood-1567641_1280.jpg', // Replace with your image path
     },
