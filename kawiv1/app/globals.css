@@ -2,3 +2,129 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Forum';
+  src: url('/fonts/Forum-Regular') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('/fonts/WorkSans-Italic-VariableFont_wght') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('/noise2.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #9a9d9e;
+}
+
+h1, h2, h3, h4, h5, h6, #nav {
+  font-family: 'Forum';
+}
+
+p, li {
+  font-family: 'WorkSans';
+}
+
+footer{
+    margin-top: auto;
+}
+
+form {
+    width: 75%;
+    height: 50vh;
+}
+/* .main {
+  background-image: url('/noise.svg');
+} */
+
+#contactForm {
+    min-height: 65vh;
+    background-color: #d5cbc0;
+    border: 5px solid #394f5c;
+}
+
+#mailButton {
+  margin-top: 2em;
+  margin: auto;
+}
+
+#outterDiv {
+    min-height: 25vh;
+    padding: 2rem;
+    margin-top: 0%;
+    background-color: #d5cbc0;
+    border: 5px solid #394f5c;
+}
+
+#innerLine {
+    background-color: #394f5c;
+}
+
+#nav {
+    background-color: #394f5c;
+}
+
+/* services */
+/* styles/services.css */
+
+.grid {
+    display: grid;
+  }
+  
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* styles/careers.css */
+#jobs {
+  border: 5px solid #394f5c;
+  margin-top: 5em;
+  min-height: 65vh;
+  background-color: #394f5c50;
+background-image: url('/noise.svg');
+background-size: cover;
+}
+
+.job-opening {
+    /* Add styles for each job opening container */
+  }
+  
+  .job-opening img {
+    /* Add styles for the job opening images */
+  }
+  /* Add more styles as needed */
+  
+
+/* footer */
+/* styles/footer.css */
+
+footer {
+    background-color: #394f5c;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
