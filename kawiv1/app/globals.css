@@ -16,6 +16,28 @@
   font-style: normal;
 } */
 
+/* Flexbox Styles for Mobile View */
+@media (max-width: 767px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  footer {
+    position: sticky;
+    bottom: 0;
+    background-color: #394f5c;
+    color: #fff;
+    padding: 20px;
+    z-index: 100; /* Adjust the z-index as needed, ensure it's higher than other content */
+  }
+}
+
 
 body{
     min-height: 100vh;
@@ -35,8 +57,12 @@ p, li {
   font-family: 'WorkSans';
 }
 
+  /* General Footer Styles */
 footer{
     margin-top: auto;
+    background-color: #394f5c;
+  color: #fff;
+  padding: 20px;
 }
 
 form {
@@ -116,15 +142,21 @@ background-size: cover;
 /* footer */
 /* styles/footer.css */
 
-footer {
+/* footer {
     background-color: #394f5c;
     color: #fff;
     padding: 20px;
   }
   
   .social-icons img {
-    /* width: 30px;
-    height: 30px; */
+    width: 30px;
+    height: 30px;
     margin-right: 10px;
-  }
+  } */
+
+
+
+
+
+
   
