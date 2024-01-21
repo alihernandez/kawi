@@ -8,7 +8,7 @@ const Service = () => {
     {
       title: 'Weekly House Checks',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: 'https://cdn.pixabay.com/photo/2016/04/16/21/22/crosscut-saw-1333772_1280.jpg', // Replace with your image path
+      image: 'https://cdn.pixabay.com/photo/2017/09/08/10/28/to-design-2728333_1280.jpg', // Replace with your image path
     },
     {
       title: 'Monthly Full Inspections',
@@ -18,7 +18,7 @@ const Service = () => {
     {
       title: 'Home Repairs',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: 'https://cdn.pixabay.com/photo/2016/04/16/21/22/crosscut-saw-1333772_1280.jpg', // Replace with your image path
+      image: 'https://cdn.pixabay.com/photo/2017/06/19/22/58/porch-2421146_1280.jpg', // Replace with your image path
     },
     {
       title: 'Assembly and Installation',
