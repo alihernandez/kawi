@@ -4,7 +4,8 @@ import { useState } from 'react';
 
 export default function Contact() {
   const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('')
+  const [message, setMessage] = useState('');
+  const [isMessageSent, setMessageSent] = useState(false);
 
   const sendMail = async (e) => {
     e.preventDefault();
@@ -18,18 +19,23 @@ export default function Contact() {
         subject,
         message
       })
-    })
-    console.log(await response.json())
-    console.log("test console");
+    });
+
+    console.log(await response.json());
+    setMessageSent(true);
   }
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4 sm:p-8">
-    <div className='flex flex-col justify-center items-center w-full sm:w-4/5 rounded-xl' id='contactForm'>
-    <form onSubmit={sendMail} className="p-4 sm:p-6" id='innerLine'>
-  <div className="flex flex-col items-center w-full  text-center">
-    <h1 className="text-xl font-semibold">*Placeholder*</h1>
-  </div>
-  <div className="relative flex flex-col space-y-2">
+      <div className='flex flex-col justify-center items-center w-full sm:w-4/5 rounded-xl' id='contactForm'>
+        {isMessageSent ? (
+          <p className="text-green-500 font-bold">Message Sent Successfully!</p>
+        ) : (
+          <form onSubmit={sendMail} className="p-4 sm:p-6" id='innerLine'>
+            <div className="flex flex-col items-center w-full  text-center">
+              <h1 className="text-xl font-semibold">*Placeholder*</h1>
+            </div>
+            <div className="relative flex flex-col space-y-2">
     <label htmlFor="subject" className="text-sm font-light text-white">
       Subject
     </label>
@@ -62,15 +68,16 @@ export default function Contact() {
       className="rounded-xl border-2 border-gray-400 p-2"
     />
   </div>
-  <button
-    type='submit'
-    className="w-full sm:w-1/2 flex justify-center space-x-3 rounded-lg bg-blue-600 p-2 text-white shadow-blue-500 hover:bg-blue-700 hover:shadow-md"
-    id='mailButton'
-  >
-    <span>Send Message</span>
-  </button>
-</form>
-    </div>
-  </main>
-  )
+            <button
+              type='submit'
+              className="w-full sm:w-1/2 flex justify-center space-x-3 rounded-lg bg-blue-600 p-2 text-white shadow-blue-500 hover:bg-blue-700 hover:shadow-md"
+              id='mailButton'
+            >
+              <span>Send Message</span>
+            </button>
+          </form>
+        )}
+      </div>
+    </main>
+  );
 }

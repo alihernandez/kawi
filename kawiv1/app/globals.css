@@ -29,12 +29,16 @@
   }
 
   footer {
-    position: sticky;
+    /* position: sticky; */
     bottom: 0;
     background-color: #394f5c;
     color: #fff;
     padding: 20px;
     z-index: 100; /* Adjust the z-index as needed, ensure it's higher than other content */
+    #locale,
+    #other {
+      display: none;
+    }
   }
 }
 
