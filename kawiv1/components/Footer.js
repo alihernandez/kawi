@@ -21,9 +21,9 @@ const Footer = () => {
         <div className="mb-4 sm:mb-0">
           <nav>
             <ul className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
-              <li>LOCATIONINFO</li>
-              <li>PHONENUMBER</li>
-              <li>OTHER INFO</li>
+              <li id="locale">LOCATIONINFO</li>
+              <li id="phone">PHONENUMBER</li>
+              <li id="other">OTHER INFO</li>
             </ul>
           </nav>
         </div>

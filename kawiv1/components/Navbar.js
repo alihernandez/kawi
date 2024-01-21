@@ -1,6 +1,8 @@
 'use client'
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -11,6 +13,17 @@ const Navbar = () => {
     setNavVisible(!isNavVisible);
     setButtonVisible(false); // Hide the button after it's clicked
   };
+
+  useEffect(() => {
+    // Check if the button should be visible on initial render
+    const shouldButtonBeVisible = localStorage.getItem("isButtonVisible") !== "false";
+    setButtonVisible(shouldButtonBeVisible);
+  }, []);
+
+  useEffect(() => {
+    // Save the visibility of the button to localStorage
+    localStorage.setItem("isButtonVisible", isButtonVisible);
+  }, [isButtonVisible]);
 
   return (
     <header className="primary-header flex p-4 text-white" id="nav">
@@ -24,7 +37,7 @@ const Navbar = () => {
           aria-controls="primary-navigation"
           aria-expanded={isNavVisible.toString()}
         >
-          Menu
+          <FontAwesomeIcon icon={faBars} /> {/* Icon component */}
         </button>
       )}
       <nav className={`lg:flex ${isNavVisible ? "" : "hidden"}`}>
