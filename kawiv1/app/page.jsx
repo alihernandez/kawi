@@ -17,7 +17,7 @@ const Home = () => {
     <>
       <main className="main">
         {/* Hero Section */}
-        <div className="hero-section flex justify-center items-center h-96 text-white text-center bg-center bg-cover" style={{ backgroundImage: 'url("https://cdn.pixabay.com/photo/2016/11/23/15/04/wooden-floor-1853405_1280.jpg")' }}>
+        <div className="hero-section flex justify-center items-center text-white text-center bg-center bg-cover" style={{ backgroundImage: 'url("https://cdn.pixabay.com/photo/2016/11/23/15/04/wooden-floor-1853405_1280.jpg")' }}>
           <div>
             <h1 className="text-4xl font-bold mb-4">Welcome text here</h1>
             <p className="text-lg">More text here</p>

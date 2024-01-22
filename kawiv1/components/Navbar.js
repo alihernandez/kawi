@@ -15,10 +15,16 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    console.log("isButtonVisible:", isButtonVisible);
+  }, [isButtonVisible]);
+  
+  useEffect(() => {
     // Check if the button should be visible on initial render
     const shouldButtonBeVisible = localStorage.getItem("isButtonVisible") !== "false";
+    console.log("shouldButtonBeVisible:", shouldButtonBeVisible);
     setButtonVisible(shouldButtonBeVisible);
   }, []);
+  
 
   useEffect(() => {
     // Save the visibility of the button to localStorage
