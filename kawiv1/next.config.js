@@ -1,10 +1,10 @@
-// next.config.js
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    images: {
-      domains: ['cdn.pixabay.com'],
-    },
-  };
-  
-  module.exports = nextConfig;
-  
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.pixabay.com'
+      },
+    ],
+  },
+}
