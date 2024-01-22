@@ -44,7 +44,7 @@
 
 
 body{
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
     background-image: url('/noise2.svg');
@@ -72,6 +72,10 @@ footer{
 form {
     width: 75%;
     height: 50vh;
+}
+
+.hero-section {
+  min-height: 75vh;
 }
 /* .main {
   background-image: url('/noise.svg');
