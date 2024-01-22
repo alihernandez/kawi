@@ -1,38 +1,41 @@
-// Import necessary modules/components
 import Image from 'next/image';
 
-// Example image URLs
 const images = [
   'https://cdn.pixabay.com/photo/2016/11/24/20/30/floor-plan-1857175_1280.jpg',
   'https://cdn.pixabay.com/photo/2016/07/14/09/04/texture-1516370_1280.jpg',
   'https://cdn.pixabay.com/photo/2015/09/09/20/40/drawing-933207_1280.jpg',
   'https://cdn.pixabay.com/photo/2018/04/21/19/13/roof-truss-3339206_1280.jpg',
   'https://cdn.pixabay.com/photo/2016/10/16/16/51/miniature-figure-1745770_1280.jpg',
-  // Add more image URLs as needed
 ];
 
 export const metadata = {
   title: 'Kawi Home Page',
 };
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <main className="main">
-                   {/* Images above outterDiv */}
-                   <div className="flex justify-center items-center w-full mt-4">
+        {/* Hero Section */}
+        <div className="hero-section flex justify-center items-center h-96 text-white text-center bg-center bg-cover" style={{ backgroundImage: 'url("https://cdn.pixabay.com/photo/2016/11/23/15/04/wooden-floor-1853405_1280.jpg")' }}>
+          <div>
+            <h1 className="text-4xl font-bold mb-4">Welcome text here</h1>
+            <p className="text-lg">More text here</p>
+          </div>
+        </div>
+
+        {/* Images above outterDiv */}
+        <div className="flex justify-center items-center w-full mt-4">
           {images.map((imageUrl, index) => (
             <div key={index} className="m-2">
-              <Image src={imageUrl} alt={`Image ${index <! 2}`} width={200} height={200} />
+              <Image src={imageUrl} alt={`Image ${index + 1}`} width={200} height={200} />
             </div>
           ))}
         </div>
-       
-        <div className="flex justify-center items-center min-h-full">
 
+        {/* Content inside outterDiv */}
+        <div className="flex justify-center items-center min-h-full">
           <div className="flex flex-col justify-center items-center w-full max-w-screen-md p-4 rounded-xl">
-           
-            {/* Content inside outterDiv */}
             <div className="flex flex-col justify-center items-center w-full rounded-xl p-4" id="outterDiv">
               <p>About us..</p>
               <div className="flex justify-center my-2 h-4/5 w-full rounded-lg text-center text-white overscroll-auto" id="innerLine">
@@ -46,17 +49,11 @@ export default function Home() {
                 </p>
               </div>
             </div>
-             {/* Images to the sides */}
-             {/* <div className="flex justify-between">
-              {images.map((imageUrl, index) => (
-                <div key={index} className="w-1/4 m-2">
-                  <Image src={imageUrl} alt={`Image ${index + 1}`} width={200} height={200} />
-                </div>
-              ))}
-            </div> */}
           </div>
         </div>
       </main>
     </>
   );
-}
+};
+
+export default Home;
