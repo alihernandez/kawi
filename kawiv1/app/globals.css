@@ -28,6 +28,11 @@
     flex: 1;
   }
 
+  #locale,
+    #other {
+      display: none;
+    }
+
   footer {
     /* position: sticky; */
     bottom: 0;
@@ -35,10 +40,6 @@
     color: #fff;
     padding: 20px;
     z-index: 100; /* Adjust the z-index as needed, ensure it's higher than other content */
-    /* #locale,
-    #other {
-      display: none;
-    } */
   }
 }
 
@@ -47,10 +48,15 @@ body{
     /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     background-image: url('/noise2.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #9a9d9e;
+}
+
+main {
+  flex: 1;
 }
 
 h1, h2, h3, h4, h5, h6, #nav {
@@ -146,25 +152,4 @@ background-size: cover;
   }
   /* Add more styles as needed */
   
-
-/* footer */
-/* styles/footer.css */
-
-/* footer {
-    background-color: #394f5c;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  .social-icons img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-  } */
-
-
-
-
-
-
   
