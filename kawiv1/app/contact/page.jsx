@@ -33,7 +33,8 @@ export default function Contact() {
         ) : (
           <form onSubmit={sendMail} className="p-4 sm:p-6" id='innerLine'>
             <div className="flex flex-col items-center w-full  text-center">
-              <h1 className="text-xl font-semibold">*Placeholder*</h1>
+              <h1 className="text-xl font-semibold">Connect with Us Today for Expert Construction Services!</h1>
+              <p>Have questions, inquiries, or ready to kickstart your project? <br/> Fill out the form below, and our dedicated team will get in touch with you promptly. <br />Let's bring your vision to life!</p>
             </div>
             <div className="relative flex flex-col space-y-2">
     <label htmlFor="subject" className="text-sm font-light text-white">
@@ -68,13 +69,13 @@ export default function Contact() {
       className="rounded-xl border-2 border-gray-400 p-2"
     />
   </div>
-            <button
-              type='submit'
-              className="w-full sm:w-1/2 flex justify-center space-x-3 rounded-lg bg-blue-600 p-2 text-white shadow-blue-500 hover:bg-blue-700 hover:shadow-md"
-              id='mailButton'
-            >
-              <span>Send Message</span>
-            </button>
+  <button
+  type='submit'
+  className="mx-auto mt-8 flex justify-center rounded-sm text-white hover:shadow-md"
+  id='mailButton'
+>
+  <span className='box'>Send Message</span>
+</button>
           </form>
         )}
       </div>
