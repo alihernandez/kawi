@@ -21,7 +21,7 @@ const Home = () => {
         <div className="hero-section flex justify-center items-center text-white text-center bg-center bg-cover" style={{ backgroundImage: 'url("https://cdn.pixabay.com/photo/2016/11/23/15/04/wooden-floor-1853405_1280.jpg")' }}>
           <div>
             <h1 className="text-4xl font-bold mb-4">Welcome to Kawi</h1>
-            <p className="text-lg">Let's build something remarkable together.</p>
+            <p className="text-lg">Let`&apos;` build something remarkable together.</p>
           </div>
         </div>
 
