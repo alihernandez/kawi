@@ -29,9 +29,9 @@
   }
 
   #locale,
-    #other {
-      display: none;
-    }
+  #other {
+    display: none;
+  }
 
   footer {
     /* position: sticky; */
@@ -43,41 +43,47 @@
   }
 }
 
-
-body{
-    /* min-height: 100vh; */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-image: url('/noise2.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #9a9d9e;
+body {
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url("/aaabstract.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #9a9d9e;
 }
 
 main {
   flex: 1;
 }
 
-h1, h2, h3, h4, h5, h6, #nav {
-  font-family: 'Forum';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#nav {
+  font-family: "Forum";
 }
 
-p, li {
-  font-family: 'WorkSans';
+p,
+li {
+  font-family: "WorkSans";
 }
 
-  /* General Footer Styles */
-footer{
-    margin-top: auto;
-    background-color: #394f5c;
+/* General Footer Styles */
+footer {
+  margin-top: auto;
+  background-color: #394f5c;
   color: #fff;
   padding: 20px;
 }
 
 form {
-    width: 75%;
-    height: 50vh;
+  width: 75%;
+  height: 50vh;
 }
 
 .hero-section {
@@ -88,68 +94,226 @@ form {
 } */
 
 #contactForm {
-    min-height: 65vh;
-    background-color: #d5cbc0;
-    border: 5px solid #394f5c;
+  min-height: 65vh;
+  background-color: #d5cbc0;
+  border: 5px solid #394f5c;
 }
 
-#mailButton {
+/* #mailButton {
   margin-top: 2em;
   margin: auto;
-}
+} */
 
 #outterDiv {
-    min-height: 25vh;
-    padding: 2rem;
-    margin-top: 0%;
-    background-color: #d5cbc0;
-    border: 5px solid #394f5c;
+  min-height: 25vh;
+  padding: 2rem;
+  margin-top: 0%;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #e4d9cd, #c0b7ad);
+  box-shadow: 7px 7px 14px #b5ada3, -7px -7px 14px #f5e9dd;
 }
 
 #innerLine {
-    background-color: #394f5c;
+  background-color: #394f5c;
 }
 
 #nav {
-    background-color: #394f5c;
+  background-color: #394f5c;
 }
 
 /* services */
 /* styles/services.css */
 
 .grid {
-    display: grid;
-  }
-  
-  .grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-  
-  .grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  
-  .grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+  display: grid;
+}
 
-  /* styles/careers.css */
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#services{
+border-radius: 0px;
+background: linear-gradient(145deg, #ffffff, #e6e6e6);
+box-shadow:  6px 6px 12px #878787,
+             -6px -6px 12px #ffffff;
+}
+
+/* styles/careers.css */
+
 #jobs {
+  margin-bottom: 5em;
+  border-radius: 41px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+}
+/* #jobs {
   border: 5px solid #394f5c;
   margin-top: 5em;
   min-height: 65vh;
   background-color: #394f5c50;
 background-image: url('/noise.svg');
 background-size: cover;
-}
+} */
 
 .job-opening {
-    /* Add styles for each job opening container */
+  /* Add styles for each job opening container */
+}
+
+.job-opening img {
+  /* Add styles for the job opening images */
+}
+/* Add more styles as needed */
+
+/* contact form button */
+.box {
+  width: 140px;
+  height: auto;
+  float: left;
+  transition: 0.5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background-color: #d5cbc03e;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.box:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: 0.3s transform linear, 0.3s height linear 0.3s;
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: 0.3s transform linear, 0.3s height linear 0.5s;
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+
+/* loader styles */
+/* styles.css */
+
+.newtons-cradle {
+  --uib-size: 50px;
+  --uib-speed: 1.2s;
+  --uib-color: #474554;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--uib-size);
+  height: var(--uib-size);
+}
+
+.newtons-cradle__dot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 25%;
+  transform-origin: center top;
+}
+
+.newtons-cradle__dot::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 25%;
+  border-radius: 50%;
+  background-color: var(--uib-color);
+}
+
+.newtons-cradle__dot:first-child {
+  animation: swing var(--uib-speed) linear infinite;
+}
+
+.newtons-cradle__dot:last-child {
+  animation: swing2 var(--uib-speed) linear infinite;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
   }
-  
-  .job-opening img {
-    /* Add styles for the job opening images */
+
+  25% {
+    transform: rotate(70deg);
+    animation-timing-function: ease-in;
   }
-  /* Add more styles as needed */
-  
-  
+
+  50% {
+    transform: rotate(0deg);
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes swing2 {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: linear;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+
+  75% {
+    transform: rotate(-70deg);
+    animation-timing-function: ease-in;
+  }
+}
