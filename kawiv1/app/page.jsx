@@ -21,7 +21,7 @@ const Home = () => {
         <div className="hero-section flex justify-center items-center text-white text-center bg-center bg-cover" style={{ backgroundImage: 'url("https://cdn.pixabay.com/photo/2016/11/23/15/04/wooden-floor-1853405_1280.jpg")' }}>
           <div>
             <h1 className="text-4xl font-bold mb-4">Welcome to Kawi</h1>
-            <p className="text-lg">Let's build something remarkable together. What is happening?</p>
+            <p className="text-lg">Let&quots build something remarkable together.</p>
           </div>
         </div>
 
@@ -41,12 +41,12 @@ const Home = () => {
               <p>About us..</p>
               <div className="flex justify-center my-2 h-4/5 w-full rounded-lg text-center text-white overscroll-auto" id="innerLine">
                 <p>
-                Kawi prides itself in maintaining your home's integrity to the Rocky Mountain standard, elevated. 
+                Kawi prides itself in maintaining your home&apos;s integrity to the Rocky Mountain standard, elevated. 
                 </p>
               </div>
               <div className="flex justify-center text-center my-2 h-4/6 w-full rounded-lg">
                 <p>
-                With in-house experienced techs and great industry relationships, we’ll see to it that your projects, tasks and requests are met.
+                With in-house experienced techs and great industry relationships, we&apos;ll see to it that your projects, tasks and requests are met.
                 </p>
               </div>
             </div>
