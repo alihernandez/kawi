@@ -34,7 +34,7 @@ export default function Contact() {
           <form onSubmit={sendMail} className="p-4 sm:p-6" id='innerLine'>
             <div className="flex flex-col items-center w-full  text-center">
               <h1 className="text-xl font-semibold">Connect with Us Today for Expert Construction Services!</h1>
-              <p>Have questions, inquiries, or ready to kickstart your project? <br/> Fill out the form below, and our dedicated team will get in touch with you promptly. <br />Let's bring your vision to life!</p>
+              <p>Have questions, inquiries, or ready to kickstart your project? <br/> Fill out the form below, and our dedicated team will get in touch with you promptly. <br/> Let us bring your vision to life!</p>
             </div>
             <div className="relative flex flex-col space-y-2">
     <label htmlFor="subject" className="text-sm font-light text-white">
