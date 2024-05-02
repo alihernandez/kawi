@@ -15,11 +15,14 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    // Check if the button should be visible on initial render
-    const shouldButtonBeVisible = localStorage.getItem("isButtonVisible") !== "false";
-    console.log("shouldButtonBeVisible:", shouldButtonBeVisible);
-    setButtonVisible(shouldButtonBeVisible);
-  }, []); // Remove dependency array
+    console.log("isButtonVisible:", isButtonVisible);
+  }, [isButtonVisible]);
+  
+  useEffect(() => {
+    // Set the button to be visible by default
+    setButtonVisible(true);
+  }, []);
+  
 
   useEffect(() => {
     // Save the visibility of the button to localStorage
@@ -31,14 +34,14 @@ const Navbar = () => {
       <div className="nav flex-1">
         <h3 className="text-2xl font-bold">Kawi Services LLC</h3>
       </div>
-      {isButtonVisible && (
+      {isButtonVisible && ( // Render the button only if it's visible
         <button
           onClick={handleClick}
           className="mobile-toggle block lg:hidden"
           aria-controls="primary-navigation"
           aria-expanded={isNavVisible.toString()}
         >
-          <FontAwesomeIcon icon={faBars} />
+          <FontAwesomeIcon icon={faBars} /> {/* Icon component */}
         </button>
       )}
       <nav className={`lg:flex ${isNavVisible ? "" : "hidden"}`}>
