@@ -93,11 +93,11 @@ form {
   background-image: url('/noise.svg');
 } */
 
-#contactForm {
+/* #contactForm {
   min-height: 65vh;
   background-color: #d5cbc0;
   border: 5px solid #394f5c;
-}
+} */
 
 /* #mailButton {
   margin-top: 2em;
