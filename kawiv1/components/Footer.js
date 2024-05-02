@@ -8,22 +8,22 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center h-full">
         <div className="flex mb-4 sm:mb-0 space-x-4">
           {/* Social Media Icons (Replace the links and icons with your own) */}
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="#" target="https://www.facebook.com/kawi.services?mibextid=LQQJ4d" rel="noopener noreferrer">
             <Image src="/facebook.png" alt="Facebook" className="w-6 h-6" width={24} height={24} />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="#" target="https://www.instagram.com/kawi.services/" rel="noopener noreferrer">
             <Image src="/instagram.png" alt="Instagram" className="w-6 h-6" width={24} height={24} />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          {/* <a href="#" target="_blank" rel="noopener noreferrer">
             <Image src="/linkedin.png" alt="LinkedIn" className="w-6 h-6" width={24} height={24} />
-          </a>
+          </a> */}
         </div>
         <div className="mb-4 sm:mb-0">
           <nav>
             <ul className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
               <li id="locale">ROARING FORK VALLEY</li>
-              <li id="phone">PHONENUMBER</li>
-              <li id="other">OTHER INFO</li>
+              <li id="phone">+1(251)-281-7303</li>
+              {/* <li id="other">OTHER INFO</li> */}
             </ul>
           </nav>
         </div>

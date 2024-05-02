@@ -1,5 +1,3 @@
-// pages/service.js
-
 import Image from "next/image";
 
 
