@@ -27,7 +27,7 @@ export default function Contact() {
 
   return (
     <main className="flex flex-col items-center justify-center p-4 sm:p-8">
-      <div className="form-container flex-col-center">
+      <div className="overflow-y-auto form-container flex-col-center">
         {isMessageSent ? (
           <p className="text-green-500 font-bold">Message Sent Successfully!</p>
         ) : (
