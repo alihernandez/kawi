@@ -8,10 +8,10 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center h-full">
         <div className="flex mb-4 sm:mb-0 space-x-4">
           {/* Social Media Icons (Replace the links and icons with your own) */}
-          <a href="#" target="https://www.facebook.com/kawi.services?mibextid=LQQJ4d" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/kawi.services?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">
             <Image src="/facebook.png" alt="Facebook" className="w-6 h-6" width={24} height={24} />
           </a>
-          <a href="#" target="https://www.instagram.com/kawi.services/" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/kawi.services/" target="_blank" rel="noopener noreferrer">
             <Image src="/instagram.png" alt="Instagram" className="w-6 h-6" width={24} height={24} />
           </a>
           {/* <a href="#" target="_blank" rel="noopener noreferrer">
@@ -30,7 +30,7 @@ const Footer = () => {
         <div>
           {/* Contact Information */}
           <p className="text-sm">
-            <span className="font-bold">Contact:</span> kawiservicesaspen@gmail.com
+            <span className="font-bold">Contact:</span> <a href="mailto:kawiservicesaspen@gmail.com">kawiservicesaspen@gmail.com</a>
           </p>
         </div>
       </div>

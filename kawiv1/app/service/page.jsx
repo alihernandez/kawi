@@ -6,7 +6,7 @@ const Service = () => {
     {
       title: 'Weekly House Checks',
       description: 'We run water, test lights, test doors, and note wall, ceiling, and floor damage while you are away.',
-      image: 'https://cdn.pixabay.com/photo/2017/09/08/10/28/to-design-2728333_1280.jpg', // Replace with your image path
+      image: 'https://cdn.pixabay.com/photo/2019/12/01/23/50/kitchen-4666676_1280.png', // Replace with your image path
     },
     {
       title: 'Test Appliances ',
@@ -26,7 +26,7 @@ const Service = () => {
     {
       title: 'Design and construct',
       description: 'Pull permits, draw up construction plans, create and follow finish schedules.',
-      image: 'https://cdn.pixabay.com/photo/2016/04/16/21/22/crosscut-saw-1333772_1280.jpg', // Replace with your image path
+      image: 'https://cdn.pixabay.com/photo/2016/11/24/20/30/floor-plan-1857175_1280.jpg', // Replace with your image path
     },
     {
       title: 'General Handyman Services',
@@ -36,7 +36,7 @@ const Service = () => {
     {
       title: 'Emergency Repairs',
       description: 'Clean up leaks, fix breaks, and repair damage when something unexpected happens.',
-      image: 'https://cdn.pixabay.com/photo/2016/04/16/21/22/crosscut-saw-1333772_1280.jpg', // Replace with your image path
+      image: 'https://cdn.pixabay.com/photo/2015/12/07/10/56/architect-1080589_1280.jpg', // Replace with your image path
     },
     // Add more services as needed
   ];

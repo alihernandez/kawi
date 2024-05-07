@@ -10,19 +10,19 @@ const CareersPage = () => {
       title: "General Info",
       type: "",
       description:
-        "People with a criminal record are encouraged to apply",
+        "",
         hours: "30 – 40 per week",
         schedule: "•	8 hour shift •	Monday to Friday",
         supplemental: "Overtime pay",
         relocate: 'Relocate to the Roaring Fork Valley before starting work (Required) Work Location: In person.',
       image:
-        "https://cdn.pixabay.com/photo/2014/06/17/16/53/blueprint-370588_1280.jpg", // Replace with your image path
+        "https://cdn.pixabay.com/photo/2017/07/15/15/49/males-2506826_1280.jpg", // Replace with your image path
     },
     {
       title: "Project Manager",
       type: "Full-time",
       description:
-        "-	Plans and oversees various types of construction projects from start to finish.-	Creating and staying within a project budget, as well as reporting project progress and budget back to bosses and clients. Ability to pull permits to construct jobs within certain zones.Listen to and communicate clients goals for projects to subcontractors and construction workers.Listen to and then create clear instructions from bosses, engineers and owners to contractors and workers. Mechanical knowledge and ability to use hand tools and power tools effectively. Ability to lift heavy objects and perform physical labor as needed. Strong attention to detail and ability to follow instructions. Note: This job description is not intended to be all-inclusive. Employee may perform other related duties as negotiated to meet the ongoing needs of the organization.",
+        "-	Plans and oversees various types of construction projects from start to finish.-	Creating and staying within a project budget, as well as reporting project progress and budget back to bosses and clients. Ability to pull permits to construct jobs within certain zones. Listen to and communicate clients goals for projects to subcontractors and construction workers. Listen to and then create clear instructions from bosses, engineers and owners to contractors and workers. Mechanical knowledge and ability to use hand tools and power tools effectively. Ability to lift heavy objects and perform physical labor as needed. Strong attention to detail and ability to follow instructions. Note: This job description is not intended to be all-inclusive. Employee may perform other related duties as negotiated to meet the ongoing needs of the organization.",
       salary: "$40.00 per hour",
       image:
         "https://cdn.pixabay.com/photo/2016/10/16/16/51/miniature-figure-1745770_1280.jpg", // Replace with your image path
