@@ -30,7 +30,7 @@ const Footer = () => {
         <div>
           {/* Contact Information */}
           <p className="text-sm">
-            <span className="font-bold">Contact:</span> <a href="mailto:kawiservicesaspen@gmail.com">kawiservicesaspen@gmail.com</a>
+            <span className="font-bold">Contact:</span> <a href="mailto:office@kawiservices.com">office@kawiservices.com</a>
           </p>
         </div>
       </div>
