@@ -5,6 +5,7 @@ import { useState } from 'react';
 export default function Contact() {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const [info, setInfo] = useState('');
   const [isMessageSent, setMessageSent] = useState(false);
 
   const sendMail = async (e) => {
@@ -17,6 +18,7 @@ export default function Contact() {
       },
       body: JSON.stringify({
         subject,
+        info,
         message
       })
     });
@@ -49,6 +51,22 @@ export default function Contact() {
                   setSubject(e.target.value);
                 }}
                 placeholder="Subject"
+                className="rounded-xl border-2 border-gray-400 p-2"
+              />
+            </div>
+            <div className="flex flex-col space-y-2">
+              <label htmlFor="info" className="text-sm font-light text-white">
+                Return Contact Information
+              </label>
+              <input
+                name="info"  
+                id="info"
+                required
+                value={info}
+                onChange={(e) => {
+                  setInfo(e.target.value);
+                }}
+                placeholder="Good Email or Phone Number"
                 className="rounded-xl border-2 border-gray-400 p-2"
               />
             </div>

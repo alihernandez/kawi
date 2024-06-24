@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer';
 
 export async function POST(request) {
   try {
-    const { name, email, subject, message } = await request.json();
+    const { subject, info, message } = await request.json();
 
     const transporter = nodemailer.createTransport({
 
@@ -41,6 +41,9 @@ export async function POST(request) {
       html: `
         <h3>Hello Kawi Services!</h3>
         <li> title: ${subject}</li>
+        <br/>
+        <li> clientInfo: ${info}
+        <br/>
         <li> message: ${message}</li> 
       `,
     };
